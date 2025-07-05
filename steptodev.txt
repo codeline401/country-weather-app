@@ -1,0 +1,4 @@
+1. Create Reatc app by Vite@latest
+2. Configure main.jsx to use ReactDOM
+3. Install axios as services to get data from API
+4. Code "CountriesAPi.jsx" as services
