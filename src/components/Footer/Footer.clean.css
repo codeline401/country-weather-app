@@ -1,0 +1,62 @@
+.app-footer {
+  margin: 24px 0 0;
+  padding: 16px 18px;
+  border-top: 1px solid var(--surface-strong);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.06)
+  );
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.25) inset;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.credit {
+  color: var(--text);
+}
+
+.made-with {
+  color: var(--muted);
+}
+
+.badges {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid var(--surface-strong);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.04)
+  );
+  color: var(--text);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.badge:nth-child(1) {
+  border-color: rgba(0, 210, 255, 0.35);
+}
+
+.badge:nth-child(2) {
+  border-color: rgba(108, 92, 231, 0.35);
+}
+
+.badge:nth-child(3) {
+  border-color: rgba(255, 107, 107, 0.35);
+}
