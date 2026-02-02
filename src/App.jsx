@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import CountryList from "./components/CountryList/CountryList";
 import Notification from "./components/Notification/Notification";
-import { fetchCountries } from "./services/countriesApi";
+import { fetchCountries } from "./services/CountriesApi";
 import "./App.css";
 
 const App = () => {
