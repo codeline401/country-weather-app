@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import CountryList from "./components/CountryList/CountryList";
 import Notification from "./components/Notification/Notification";
 import { fetchCountries } from "./services/countriesApi";
@@ -40,7 +42,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <h1>Recherche un pays</h1>
+      <Header />
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
       {loading && <p className="loading">Chargement...</p>}
@@ -54,6 +56,8 @@ const App = () => {
       ) : (
         <CountryList countries={countries} />
       )}
+
+      <Footer />
     </div>
   );
 };

@@ -1,19 +1,33 @@
 .country-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 16px;
   overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.8)
+  );
+  border: 1px solid rgba(108, 92, 231, 0.25);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
 }
 
 .country-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow:
+    0 24px 50px rgba(0, 0, 0, 0.3),
+    0 0 0 4px rgba(0, 210, 255, 0.12) inset;
 }
 
 .country-flag {
   height: 160px;
   overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(108, 92, 231, 0.15),
+    rgba(0, 210, 255, 0.15)
+  );
 }
 
 .flag-image {
@@ -23,58 +37,64 @@
 }
 
 .country-info {
-  padding: 15px;
+  padding: 18px;
 }
 
 .country-name {
   margin: 0 0 10px 0;
-  color: #333;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .country-info p {
-  margin: 5px 0;
-  color: #555;
-  font-size: 0.9rem;
+  margin: 6px 0;
+  color: #374151; /* gray-700 for light card */
+  font-size: 0.95rem;
 }
 
 .country-info strong {
-  color: #333;
+  color: #111827;
 }
 
 /* Styles pour la section météo */
 .weather-section {
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top: 1px dashed #e0e0e0;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(108, 92, 231, 0.35);
 }
 
 .weather-section h3 {
-  margin: 10px 0;
+  margin: 8px 0 6px 0;
   font-size: 1rem;
-  color: #333;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .weather-loading {
-  color: #666;
+  color: #6b7280; /* gray-500 */
   font-style: italic;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
 .weather-error {
   color: #c62828;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
 .weather-info {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .weather-main {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 5px 0;
+  margin: 6px 0;
 }
 
 .weather-main img {
@@ -83,6 +103,7 @@
 }
 
 .weather-main span {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
 }

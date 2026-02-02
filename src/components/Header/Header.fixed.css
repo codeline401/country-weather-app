@@ -1,0 +1,98 @@
+.app-header {
+  margin: -10px 0 18px;
+  padding: 20px 22px;
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 1px solid var(--surface-strong);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.32);
+}
+
+.title-wrap {
+  text-align: center;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  /* Fallback: bright cyan, MUST be visible */
+  color: #00ffff;
+  text-shadow:
+    0 0 10px rgba(0, 255, 255, 0.8),
+    0 0 20px rgba(0, 210, 255, 0.6),
+    0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Apply gradient text only when supported */
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .app-title {
+    background: linear-gradient(90deg, #00ffff, #00d2ff, #6c5ce7, #ff6b6b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 100%;
+    animation: hueShift 6s ease-in-out infinite alternate;
+    text-shadow:
+      0 0 20px rgba(0, 255, 255, 0.5),
+      0 0 40px rgba(0, 210, 255, 0.3);
+  }
+}
+
+@keyframes hueShift {
+  0% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 2px 10px rgba(0, 210, 255, 0.35));
+  }
+  100% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 2px 10px rgba(255, 107, 107, 0.35));
+  }
+}
+
+.title-underline {
+  width: 160px;
+  height: 4px;
+  margin: 10px auto 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  position: relative;
+  overflow: hidden;
+}
+
+.title-underline::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  filter: blur(6px);
+  animation: shimmer 2.8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(180px);
+    opacity: 0.2;
+  }
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-weight: 400;
+}

@@ -8,6 +8,7 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         placeholder="Rechercher un pays..."
+        aria-label="Recherche de pays"
       />
     </div>
   );

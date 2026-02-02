@@ -1,18 +1,28 @@
 .notification {
-  padding: 15px;
+  padding: 14px 16px;
   margin: 20px 0;
-  border-radius: 4px;
-  font-size: 0.9rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  border: 1px solid var(--surface-strong);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
 }
 
 .notification.error {
-  background-color: #ffebee;
-  color: #c62828;
-  border-left: 4px solid #c62828;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 235, 238, 0.9),
+    rgba(255, 235, 238, 0.75)
+  );
+  color: #b71c1c;
+  border-left: 6px solid #e53935;
 }
 
 .notification.info {
-  background-color: #e3f2fd;
-  color: #1565c0;
-  border-left: 4px solid #1565c0;
+  background: linear-gradient(
+    180deg,
+    rgba(227, 242, 253, 0.9),
+    rgba(227, 242, 253, 0.75)
+  );
+  color: #0d47a1;
+  border-left: 6px solid #1e88e5;
 }
